@@ -1,0 +1,60 @@
+$rootSize: 75px !default;
+/*rem转换*/
+@function rem($px){
+    @return $px / $rootSize * 1rem;
+}
+
+.material{
+    height: calc(100% - 1.2rem);
+    .title-list{
+        height: rem(116px);background: #45444f;padding: 0 rem(25px);display: flex;align-items: center;justify-content: space-between;
+        li{
+            width: rem(140px);height: rem(70px);color: #86868a;font-size: rem(30px);background: #36353e;border-radius: rem(50px);display: flex;align-items: center;
+            justify-content: center;
+        }
+        li.on{
+            background: #ff6900;color: #fff;
+        }
+    }
+    .show-list{
+        height: calc(100% - 1.55rem);padding: rem(20px);box-sizing: border-box;overflow-y: scroll;
+        .table{
+            background: #45444f;border-radius: rem(12px);margin-bottom: rem(20px);
+            .top{
+                height: rem(299px);overflow: hidden;position: relative;
+                img{
+                    width: 100%;
+                }
+                span{
+                    width: 100%;height: rem(80px);padding: rem(20px) rem(25px);box-sizing: border-box;position: absolute;top: 0;left: 0;z-index: 10;color: #fff;
+                    font-size: rem(36px);
+                }
+            }
+            .center{
+                padding: rem(20px);border-bottom: 1px solid #5e5e65;display: flex;justify-content: space-between;
+                li{
+                    width: rem(207px);
+                    img{width: 100%;display: block;}
+                    span{
+                        padding: rem(15px) 0;color: #fff;font-size: rem(26px);display: block;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;
+                    }
+                }
+            }
+            .bottom{
+                padding: rem(20px) 0;display: flex;justify-content: center;
+                span{
+                    width: rem(300px);color: #ff6900;font-size: rem(24px);display: flex;align-items: center;justify-content: center;
+                    i{
+                        width: rem(20px);height: rem(10px);background: url(../../img/pull-down.png) center center / cover no-repeat;margin-left: rem(5px);
+                    }
+                    i.on{
+                      transform: rotate(180deg);  
+                    }
+                }
+            }
+               
+        }
+        
+    }
+    
+}

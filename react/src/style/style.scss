@@ -1,0 +1,57 @@
+$rootSize: 75px !default;
+/*rem转换*/
+@function rem($px){
+    @return $px / $rootSize * 1rem;
+}
+body,html{
+    margin: 0;padding: 0;height: 100%;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+em,i{
+    font-style: normal;
+}
+ul,ul li{
+    list-style: none;margin: 0;padding: 0;
+}
+#root{
+    height: 100%;background: #29282e;
+}
+
+.all-out{
+    height: 100%;
+}
+.all{
+    background: #45444f;border-radius: rem(10px);margin-bottom: rem(20px);
+    div:first-child{
+        height: rem(260px);overflow: hidden;
+        img{
+            width: 100%;
+        }
+    }
+    div:last-child{
+        padding: rem(15px) rem(30px);display: flex;align-items: center;justify-content: space-between;
+        span:first-child{
+            color: #fff;
+            em,i{
+                display: block;
+            }
+            em{
+                font-size: rem(30px);margin-bottom: rem(15px);
+            }
+            i{
+                font-size: rem(26px);
+            }
+        }
+        span:last-child{
+            width: rem(160px);height: rem(60px);background: #2a292f;border-radius: rem(10px);display: flex;align-items: center;justify-content: center;
+            font-size: rem(26px);color: #ff6900;
+        }
+    }
+}
+
+
+
+
+
+
